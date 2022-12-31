@@ -61,24 +61,24 @@ const AddItem = () => {
                             <p>Batch No: B54U</p>
                             <p>Brand: Gold</p>
                         </div>
-                        <div className=' flex mt-5 gap-3'>
+                        <div className=' flex justify-between mt-5 gap-3'>
                             <div className='bg-green-500 rounded-md p-6 text-white text-center shadow-lg'>
                                 <IoIosRadioButtonOn className='mx-auto' />
                                 <p className='text-xs'>Total Stock</p>
                                 <p className='font-bold'>100lb</p>
                             </div>
-                            <div className='relative rounded-md overflow-hidden shadow-lg p-2 '>
+                            <div className='relative rounded-md overflow-hidden shadow-lg p-2'>
                                 <img src={vector12} alt="" className='absolute left-0 bottom-0' />
                                 <div className='flex justify-between  gap-5'>
                                     <p className='text-green-500 flex items-center font-bold'><img src={vector} alt="" className='w-full' /> Marketplace</p>
                                     <div className='flex items-center gap-2'>
                                         <div className='flex items-center gap-1'>
-                                            <input type="checkbox" checked className="checkbox checkbox-success" />
-                                            <label htmlFor="">lb</label>
+                                            <input type="checkbox" checked className="checkbox w-5 h-5 checkbox-success" />
+                                            <label htmlFor="" className='text-sm'>lb</label>
                                         </div>
                                         <div className='flex items-center gap-1'>
-                                            <input type="checkbox" className="checkbox checkbox-accent" />
-                                            <label htmlFor="">g</label>
+                                            <input type="checkbox" className="checkbox w-5 h-5 checkbox-accent" />
+                                            <label htmlFor="" className='text-sm'>g</label>
                                         </div>
                                     </div>
 
@@ -87,17 +87,17 @@ const AddItem = () => {
                                     <div className='flex flex-col'>
                                         <BiPieChart size={20} />
                                         <p className='text-[8px] text-gray-500'>Allocated</p>
-                                        <p className='font-bold text-sm text-gray-800'>100lb</p>
+                                        <p className='font-bold text-xs text-gray-800'>100lb</p>
                                     </div>
                                     <div className='flex flex-col'>
                                         <BiDownArrowCircle size={20} />
                                         <p className='text-[8px] text-gray-500'>Min Qty</p>
-                                        <p className='font-bold text-sm text-gray-800'>5lb</p>
+                                        <p className='font-bold text-xs text-gray-800'>5lb</p>
                                     </div>
                                     <div className='flex flex-col'>
                                         <RiMoneyDollarCircleLine size={20} />
                                         <p className='text-[8px] text-gray-500'>Price</p>
-                                        <p className='font-bold text-sm text-gray-800'>$600/lb</p>
+                                        <p className='font-bold text-xs text-gray-800'>$600/lb</p>
                                     </div>
 
                                     <div className=''>
@@ -124,16 +124,50 @@ const AddItem = () => {
                                     </div>
                                 </div>
                             </div>
-                            <div className='relative shadow-lg p-2 rounded-md overflow-hidden'>
+                            <div className='relative shadow-lg p-2 rounded-md overflow-hidden flex  gap-1'>
                                 <img src={rectangle} alt="" className='absolute top-0 right-0' />
-                                <div className=' flex'>
+                                <div className=''>
                                     <p className='flex items-center ga-1 text-green-500 font-bold'>
                                         <RiAuctionLine />
                                         Auction
                                     </p>
+                                    <div className='flex  gap-1 mt-3'>
+                                        <div className='flex flex-col'>
+                                            <BiPieChart size={20} />
+                                            <p className='text-[8px] text-gray-500'>Allocated</p>
+                                            <p className='font-bold text-sm text-gray-800'>100lb</p>
+                                        </div>
+                                        <div className='flex flex-col'>
+                                            <BiDownArrowCircle size={20} />
+                                            <p className='text-[8px] text-gray-500'>Min Qty</p>
+                                            <p className='font-bold text-sm text-gray-800'>5lb</p>
+                                        </div>
+                                    </div>
+
+
 
                                 </div>
-                                <div>
+                                <div className='mt-3 '>
+                                    <div className='flex items-center gap-1'>
+                                        <div className='flex items-center gap-1'>
+                                            <div className='h-3 w-3 bg-white  z-20'>
+
+                                            </div>
+                                            <span className='text-[8px]'>Stock</span>
+                                        </div>
+                                        <div className='flex items-center gap-1'>
+                                            <div className='h-3 w-3 bg-green-500'>
+
+                                            </div>
+                                            <span className='text-[8px]'>Allocated</span>
+                                        </div>
+
+                                    </div>
+                                    <div className="radial-progress text-white mt-2" style={{ "--value": "100", "--size": "3rem", "--thickness": "5px" }}>
+                                        <div className="radial-progress text-primary z-20" style={{ "--value": "70", "--size": "3rem", "--thickness": "5px" }}>
+
+                                        </div>
+                                    </div>
 
                                 </div>
 
@@ -143,6 +177,8 @@ const AddItem = () => {
 
                 </div>
             </div>
+
+
 
         </div>
     );
